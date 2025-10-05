@@ -131,7 +131,7 @@ def build_quantity_phrase(row: pd.Series, headers: List[str]) -> str:
         # تجاهل صفر صريح
         if sval in ("0", "0.0"):
             continue
-        parts.append(f"{item_name}: {sval} /n")
+        parts.append(f"{item_name}: {sval} \n")
 
     return "، ".join(parts)
 
@@ -251,4 +251,5 @@ else:
     st.info("من فضلك ارفع ملف .xlsx حسب المخطط: العمود 1 ملاحظات، العمود 4 إجمالي، الأعمدة 5..12 أصناف (أسماء الأصناف في الصف الأول).")
 
 # تذييل
+
 st.caption("تم بإ ❤️ باستخدام Streamlit.")
